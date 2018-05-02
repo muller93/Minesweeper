@@ -1,0 +1,41 @@
+Sziasztok!
+
+A fő szál "elemei":
+- főmenü (új játék, legjobb eredmények, köszönetnyilvánítás, kilépés)
+- új játék: három nehézségi szint
+- névbekérés
+- lépés funkció (új lépés, új zászlólerakás, zászlók ellenőrzése, zászlóvisszavonás)
+- megjelenítve végig: lépések száma; fennmaradó zászlók száma
+- fordító modul (translate)
+- módosító modul (change)
+- felfedő modul (xreveal)
+
+A főszállal összekapcsolat modulok:
+- pálya legenerálása (2D mátrix)
+- pálya kirajzolása
+- három nehézségi szint
+- első találat biztosan "berobbanás"
+- zászlóelhelyezés
+- zászlóvisszavonás
+- csempés fedőfelület
+- legjobb eredmények listája
+
+Győzelem:
+a) Megfelelő mennyiségű zászló lehelyezése, ellenőrzés futtatása és teljes átfedés esetén -> Győzelem és eredmény (lépésszám) kiíratása.
+b) Összes nem akna mező felfedése -> Győzelem és eredmény (lépésszám) kiíratása.
+
+Vereség:
+a) Aknára való lépés -> lose függvény
+b) Nem teljes átfedés a zászlók és aknák között, ellenőrzés után -> lose függvény
+
+Nehézségek:
+- beviteli felületen a program összeomlásának kiküszöbölése (karakter ellenőrzés)
+- első találat ne bomba legyen -> újragenerálás (do while)
+- zászlók és aknák összehasonlítása (tömbök feltöltése, "stringesítés")
+- berobbanás végrehajtása, ellenőrzés mátrixon túlfutásának kiküszöbölése
+- lehelyezett zászló visszavonása, zászlóvisszavonás utáni elemérték visszaadása
+- fedő mátrix (user display) és alap mátrix (back-end) folyamatos összekapcsolása (oda-vissza)
+- külső fájlban lévő globális változóba visszaírás (kiküszöbölve)
+- felhasználói felület koordináta rendszerének kirajzoltatása
+- eredmények hozzáadott fájlba iratása
+- külső modulok, file-ok összekapcsolása és összehangolása logikai sorrendben a főszállal (minesweeper.js)
